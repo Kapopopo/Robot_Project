@@ -17,7 +17,7 @@ MOTION_THRESHOLD = 0.02
 PAD = 120
 
 GREEN_MP3 = "/home/pi/sounds/green.mp3"
-ELIM_WAV  = "/home/pi/sounds/eliminate.wav"
+ELIM_WAV  = "/home/pi/sounds/eliminate.mp3"
 
 
 music_proc = None
