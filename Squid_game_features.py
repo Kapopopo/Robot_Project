@@ -17,7 +17,7 @@ MOTION_THRESHOLD = 0.02
 PAD = 120
 
 GREEN_MP3 = "/home/pi/sounds/green.mp3"
-ELIM_WAV  = "/home/pi/sounds/eliminate.mp3"
+ELIM_WAV  = "/home/pi/sounds/eliminate.wav"
 
 
 music_proc = None
@@ -45,7 +45,7 @@ if not pi.connected:
 
 def set_servo_angle(angle):
     angle = max(0, min(180, angle))
-    pulse = 500 + (2400 - 500) * (angle / 180.0)  # µs
+    pulse = 500 + (2400 - 500) * (angle / 180.0)
     pi.set_servo_pulsewidth(SERVO_GPIO, pulse)
 
 led_red = LED(LED_RED_GPIO)
