@@ -56,7 +56,7 @@ print("JEU SQUID GAME INITIALISÉ")
 while True:
 
     # ================= FEU VERT =================
-    print("🎵 FEU VERT - MUSIQUE")
+    print("FEU VERT - MUSIQUE")
     set_angle(0)
     music_on()
     eyes_green()
