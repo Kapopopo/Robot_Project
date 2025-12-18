@@ -4,7 +4,7 @@ from machine import Pin, PWM
 from time import sleep, ticks_ms, ticks_diff
 import random
 
-# ===== SERVO =====
+    #SERVO
 servo = PWM(Pin(17))
 servo.freq(50)
 
@@ -15,14 +15,14 @@ def set_angle(angle):
     duty = int(us * 65535 / 20000)
     servo.duty_u16(duty)
 
-# ===== PIR =====
+    #PIR
 pir = Pin(4, Pin.IN)
 
-# ===== LED YEUX =====
+    #LED YEUX
 led_red = Pin(16, Pin.OUT)
 led_green = Pin(18, Pin.OUT)
 
-# ===== BUZZER (musique) =====
+    #BUZZER
 buzzer = Pin(15, Pin.OUT)
 
 def music_on():
@@ -55,7 +55,7 @@ print("JEU SQUID GAME INITIALISÉ")
 
 while True:
 
-    # ================= FEU VERT =================
+    #FEU VERT
     print("FEU VERT - MUSIQUE")
     set_angle(0)
     music_on()
@@ -63,7 +63,7 @@ while True:
 
     sleep(random.uniform(3, 6))
 
-    # ================= ROTATION =================
+    #ROTATION
     print("ROTATION - FEU ROUGE")
     music_off()
     eyes_red()
@@ -71,7 +71,7 @@ while True:
     set_angle(180)
     sleep(0.5)
 
-    # ================= DÉTECTION =================
+    #DÉTECTION
     print("SURVEILLANCE")
     if wait_for_motion(3):
         print("ÉLIMINÉ")
